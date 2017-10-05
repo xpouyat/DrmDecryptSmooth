@@ -1,4 +1,5 @@
 ﻿/*
+
 Copyright (c) Microsoft Corporation. All rights reserved.
 
 MIT License
@@ -22,6 +23,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
  */
+
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -34,7 +36,8 @@ using System.Xml.Linq;
 
 namespace DRMDecryptSmooth
 {
-    // This appliation 
+    // This application demonstrated how to use bento4 to dectypt a Smooth Streaming PlayReady asset.
+     
     class Program
     {
         // Location of mp4decrypt from Bento4
@@ -173,14 +176,6 @@ namespace DRMDecryptSmooth
                 ^ sha_C_Output[i] ^ sha_C_Output[i + DRM_AES_KEYSIZE_128]);
             }
             return contentKey;
-        }
-
-        public static byte[] HexStringToByteArray(string hex)
-        {
-            return Enumerable.Range(0, hex.Length)
-                             .Where(x => x % 2 == 0)
-                             .Select(x => Convert.ToByte(hex.Substring(x, 2), 16))
-                             .ToArray();
         }
 
         public static string ByteArrayToHexString(byte[] bytes)
