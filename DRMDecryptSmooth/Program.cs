@@ -17,7 +17,7 @@ using System.Xml.Linq;
 
 namespace DRMDecryptSmooth
 {
-    // This application demonstrated how to use bento4 to dectypt a Smooth Streaming PlayReady asset.
+    // This application demonstrated how to use bento4 to decrypt a Smooth Streaming PlayReady asset.
      
     class Program
     {
